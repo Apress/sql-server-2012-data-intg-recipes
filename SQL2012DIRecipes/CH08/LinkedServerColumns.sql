@@ -1,0 +1,1 @@
+EXEC sp_columns_ex @table_server = 'MyOracleDatabase', @table_name = 'Car_Sales'

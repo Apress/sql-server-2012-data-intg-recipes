@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<ROOT>
+<Invoice>
+<ID> 3</ID>
+<InvoiceNumber> AA/1/2014-07-25</InvoiceNumber>
+<DeliveryCharge> 250</DeliveryCharge->
+</Invoice>
+<Invoice_Lines>
+<InvoiceID> 3</InvoiceID>
+<SalePrice> 5000</SalePrice>
+</Invoice_Lines>
+<Invoice_Lines>
+<InvoiceID>3</InvoiceID>
+<SalePrice> 12500</SalePrice>
+</Invoice_Lines>
+</ROOT>

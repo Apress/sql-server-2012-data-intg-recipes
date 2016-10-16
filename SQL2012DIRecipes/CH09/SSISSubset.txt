@@ -1,0 +1,10 @@
+FINDSTRING(ClientDataVariable,"-",1) == 0 ? SUBSTRING(Client,1,FINDSTRING(ClientDataVariable,"-",1)) : SUBSTRING(ClientDataVariable,1,FINDSTRING(ClientDataVariable,"-",1) - 1)
+
+
+FINDSTRING(ClientDataVariable,"-",2) == 0 ? "" : SUBSTRING(ClientDataVariable,FINDSTRING(ClientDataVariable,"-",1) + 1,FINDSTRING(ClientDataVariable,"-",2) - FINDSTRING(ClientDataVariable,"-",1) - 1)
+
+
+FINDSTRING(ClientDataVariable,"-",3) == 0 ? "" : SUBSTRING(ClientDataVariable,FINDSTRING(ClientDataVariable,"-",2) + 1,FINDSTRING(ClientDataVariable,"-",3) - FINDSTRING(ClientDataVariable,"-",2) - 1)
+
+
+FINDSTRING(ClientDataVariable,"-",1) == 0 ? "" : RIGHT(ClientDataVariable,FINDSTRING(REVERSE(ClientDataVariable),"-",1) - 1)

@@ -1,0 +1,58 @@
+Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+        Dim NbCols As Integer
+        Dim Delimiter As String = ","
+        Dim StartPosition As Integer = 0
+        Dim EndPosition As Integer = 0
+  Dim RowContents As String = System.Text.Encoding.UTF8.GetString(Row.SourceData.GetBlobData(0, Convert.ToInt32(Row.SourceData.Length)))
+        ' Count the number of delimiters - and so the No of columns
+        NbCols = (RowContents.Length - RowContents.Replace(Delimiter, "").Length)
+        ' Set the output array as a function of the number of columns
+        Dim OutputCols(NbCols) As String
+        ' Parse the data
+        For Ctr = 0 To NbCols + 1
+            If Ctr = 0 Then
+                If NbCols = 0 Then
+                    OutputCols(Ctr) = RowContents
+                    Exit For
+                Else
+                    StartPosition = 0
+                    EndPosition = RowContents.IndexOf(",", StartPosition)
+                    OutputCols(Ctr) = Left(RowContents, EndPosition)
+                End If
+            Else
+                StartPosition = RowContents.IndexOf(",", StartPosition)
+                EndPosition = RowContents.IndexOf(",", StartPosition + 1)
+                If EndPosition = -1 Then
+                    OutputCols(Ctr) = RowContents.Substring(StartPosition + 1)
+                    Exit For
+                Else
+                    OutputCols(Ctr) = RowContents.Substring(StartPosition + 1, (EndPosition - StartPosition) - 1)
+                End If
+            End If
+            StartPosition = EndPosition
+        Next
+        ' Send parsed data to the appropriate output column
+        For ColIDOut As Integer = 0 To NbCols
+            If ColIDOut = 0 Then
+                Row.ID = OutputCols(0)
+            End If
+            If ColIDOut = 1 Then
+                Row.InvoiceID = OutputCols(1)
+            End If
+            If ColIDOut = 2 Then
+                Row.StockID = OutputCols(2)
+            End If
+            If ColIDOut = 3 Then
+                Row.Quantity = OutputCols(3)
+            End If
+            If ColIDOut = 4 Then
+                Row.SalePrice = OutputCols(4)
+            End If
+            If ColIDOut = 5 Then
+                Row.Comment1 = OutputCols(5)
+            End If
+            If ColIDOut = 6 Then
+                Row.Comment2 = OutputCols(6)
+            End If
+        Next
+    End Sub

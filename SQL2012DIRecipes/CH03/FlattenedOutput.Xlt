@@ -1,0 +1,27 @@
+<xsl:stylesheet version = "1.0" xmlns:xsl = "http://www.w3.org/1999/XSL/Transform"
+xmlns = "http://www.w3.org/TR/xhtml1/strict">
+<xsl:output method = "xml" indent = "yes"/>
+<xsl:template match = "/">
+<Clients>
+<xsl:for-each select = "Clients/Client">
+<Client>
+<xsl:element name = "ID">
+<xsl:value-of select = "ID"/>
+</xsl:element>
+<xsl:element name = "Name">
+<xsl:value-of select = "ClientName"/>
+</xsl:element>
+<xsl:element name = "Town">
+<xsl:value-of select = "Details/@Town"/>
+</xsl:element>
+<xsl:element name = "County">
+<xsl:value-of select = "Details/County"/>
+</xsl:element>
+<xsl:element name = "Address">
+<xsl:value-of select = "Details/Address1"/>
+</xsl:element>
+</Client>
+</xsl:for-each>
+</Clients>
+</xsl:template>
+</xsl:stylesheet>

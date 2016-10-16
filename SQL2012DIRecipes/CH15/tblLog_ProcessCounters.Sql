@@ -1,0 +1,13 @@
+CREATE TABLE CarSales_Logging.log.Log_ProcessCounters
+(
+ID INT IDENTITY(1,1) NOT NULL,
+PROCESSID INT NULL,
+CounterType NVARCHAR(250) NULL,
+CounterDescription NVARCHAR(250) NULL,
+CounterResult BIGINT NULL,
+ProcessName VARCHAR(150) NULL,
+ProcessStep VARCHAR(150) NULL,
+UserName VARCHAR(150) NULL,
+ComputerName VARCHAR(150) NULL,
+DateCreated DATETIME NULL DEFAULT GETDATE()
+)

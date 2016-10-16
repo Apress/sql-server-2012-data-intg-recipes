@@ -1,0 +1,8 @@
+[ODBC]
+DRIVER = SQL Server Native Client 10.0
+UID = Adam
+DATABASE = CarSales
+WSID = ADAM02
+APP = Microsoft® Windows® Operating System
+Trusted_Connection = Yes
+SERVER = ADAM02

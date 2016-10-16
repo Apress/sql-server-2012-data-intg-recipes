@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<CarSales>
+<Client>
+<ID > 3</ID>
+<ClientName> John Smith</ClientName>
+<Address1> 4, Grove Drive</Address1>
+<Town> Uttoxeter</Town>
+<County> Staffs</County>
+<Country> 1</Country>
+</Client>
+<Client>
+<ID> 7</ID>
+<ClientName> Slow Sid</ClientName>
+<Address1> 2, Rue des Bleues</Address1>
+<Town> Avignon</Town>
+<County> Vaucluse</County>
+<Country> 3</Country>
+</Client>
+</CarSales>

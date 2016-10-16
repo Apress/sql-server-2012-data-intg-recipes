@@ -1,0 +1,21 @@
+USE master
+GO
+IF db_id('CarSales_Staging') IS NOT NULL
+DROP DATABASE CarSales_Staging';
+GO
+CREATE DATABASE CarSales_Staging
+CONTAINMENT = NONE
+ON PRIMARY
+( NAME = N'CarSales_Staging', FILENAME = N'C:\SQLDIRecipes\Databases\CarSales_Staging.mdf' , SIZE = 33792KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+LOG ON
+( NAME = N'CarSales_Staging_log', FILENAME =
+N'C:\SQLDIRecipes\Databases\CarSales_Staging_log.ldf' , SIZE = 4224KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
+ALTER DATABASE CarSales_Staging SET COMPATIBILITY_LEVEL = 110
+GO
+ALTER DATABASE CarSales_Staging SET QUOTED_IDENTIFIER OFF
+GO
+ALTER DATABASE CarSales_Staging SET RECOVERY SIMPLE
+GO
+ALTER DATABASE CarSales_Staging SET READ_WRITE
+GO

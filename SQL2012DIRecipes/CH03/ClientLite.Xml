@@ -1,0 +1,12 @@
+<CarSales>
+<Client>
+<ID> 3</ID>
+<ClientName> John Smith</ClientName>
+<Country> 1</Country>
+</Client>
+<Client>
+<ID> 7</ID>
+<ClientName> Slow Sid</ClientName>
+<Country> 3</Country>
+</Client>
+</CarSales>

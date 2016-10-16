@@ -1,0 +1,11 @@
+BULK INSERT CarSales_Staging.dbo.Client_BCP
+FROM 'C:\SQL2012DIRecipes\CH05\Clients.bcp'
+WITH
+(
+DATAFILETYPE = 'widenative'
+,KEEPIDENTITY
+,TABLOCK
+,KEEPNULLS
+,ERRORFILE='C:\SQL2012DIRecipes\CH05\BulkInsertErrors.txt'
+,MAXERRORS=50
+)

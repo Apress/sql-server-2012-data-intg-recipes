@@ -1,0 +1,1321 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{DCD5D1EB-08BE-45D6-B389-1E6511F46EC0}" Name="ADAM02.CarSales1">
+      <DtsConnectionManagerID>ADAM02.CarSales1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{5FC2732A-D122-492B-92FF-44438E562E12}" Name="CarSales_ADONET">
+      <DtsConnectionManagerID>CarSales_ADONET</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{6F8A8F0E-3E29-44A4-8B5A-9C81FE887D20}" Name="Profile.Xml">
+      <DtsConnectionManagerID>Profile.Xml</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table Schema="dbo" Table="Client" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table Schema="dbo" Table="Client" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table Schema="dbo" Table="Client" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table Schema="dbo" Table="Client" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table Schema="dbo" Table="Client" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table Schema="dbo" Table="Client" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table Schema="dbo" Table="Client" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="-1" />
+        <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="-1" />
+        <KeyColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>1</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>4</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>1</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>5</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>5</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="IsCreditWorthy" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>3</MinValue>
+        <MaxValue>7</MaxValue>
+        <Mean>5</Mean>
+        <StdDev>1.4142135623731</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>3</MaxValue>
+        <Mean>2.2</Mean>
+        <StdDev>0.748331477354788</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>8</MinLength>
+        <MaxLength>14</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>8</MinLength>
+        <MaxLength>17</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>17</MinLength>
+        <MaxLength>17</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>9</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>8</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>7</MinLength>
+        <MaxLength>8</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>1</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>5</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <KeyColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>5</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Bauhaus Motors</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fast Eddie</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Honest Fred</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>John Smith</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Slow Sid</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <KeyColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2, Rue des Bleues</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4, Grove Drive</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cut Street</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Suite 20</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>12-14 Turl Street</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <KeyColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>5</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Aberdeen</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Avignon</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Oxford</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Stoke</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Uttoxeter</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Oxon</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Staffs</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Vaucluse</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>0</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Business</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Private</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>L</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>M</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>S</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>0</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="IsCreditWorthy" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>False</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>True</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>BAUHAUS MOTORS</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>HONEST FRED</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>FAST EDDIE</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>JOHN SMITH</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SLOW SID</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>2, RUE DES BLEUES</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>4, GROVE DRIVE</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>CUT STREET</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SUITE 20</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>12-14 TURL STREET</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>UTTOXETER</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>ABERDEEN</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>AVIGNON</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>OXFORD</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>STOKE</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>STAFFS</RegexText>
+            <Frequency>50</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>VAUCLUSE</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>OXON</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>BUSINESS</RegexText>
+            <Frequency>60</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>PRIVATE</RegexText>
+            <Frequency>40</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <Column Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>M</RegexText>
+            <Frequency>40</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>L</RegexText>
+            <Frequency>40</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>S</RegexText>
+            <Frequency>20</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="IsCreditWorthy" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="IsCreditWorthy" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="IsCreditWorthy" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="IsCreditWorthy" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="IsCreditWorthy" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="IsCreditWorthy" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="IsCreditWorthy" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientSince" SqlDbType="SmallDateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Country" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="PostCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="Address1" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientName" SqlDbType="NVarChar" MaxLength="150" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{5FC2732A-D122-492B-92FF-44438E562E12}</DataSourceID>
+        <Table DataSource="." Database="CarSales" Schema="dbo" Table="Client" RowCount="5" />
+        <DeterminantColumns>
+          <Column Name="ClientSize" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ClientType" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

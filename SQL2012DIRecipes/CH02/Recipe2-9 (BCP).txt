@@ -1,0 +1,19 @@
+BCP CarSales_Staging.dbo.Invoices IN C:\SQL2012DIRecipes\CH02\Invoices.txt –T –SADAM02
+
+BCP CarSales_Staging.dbo.Invoices IN C:\SQL2012DIRecipes\CH02\Invoices.txt –T –f C:\SQL2012DIRecipes\CH02\Invoices.Fmt
+
+BCP CarSales_Staging.dbo.Invoices IN C:\SQL2012DIRecipes\CH02\Invoices.txt –UAdam –PMe4B0ss
+
+BCP CarSales_Staging.dbo.Invoices IN C:\SQL2012DIRecipes\CH02\Invoices.txt –T –SmyServer\FirstInstance
+
+DECLARE @BCPVARIABLE VARCHAR(500) = 'BCP CarSales_Staging.dbo.Invoices IN C:\SQL2012DIRecipes\CH02\Invoices.txt –T –SADAM02 –f C:\SQL2012DIRecipes\CH02\Invoices.Fmt';
+EXECUTE master.dbo.xp_cmdshell @BCPVARIABLE;
+
+EXECUTE sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+EXECUTE sp_configure 'xp_cmdshell', 1;
+GO
+RECONFIGURE;
+GO

@@ -1,0 +1,20 @@
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema xmlns:sql = "urn:schemas-microsoft-com:mapping-schema">
+<xsd:element name = "CarSales" sql:is-constant = "1" >
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name = "Client" sql:relation = "Client_XMLBulkLoad" maxOccurs = "unbounded">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name = "ID" type = "xsd:integer" sql:field = "ID" />
+<xsd:element name = "ClientName" type = "xsd:string" sql:field = "ClientName" />
+<xsd:element name = "Address1" type = "xsd:string" sql:field = "Address1" />
+<xsd:element name = "Town" type = "xsd:string" sql:field = "Town" />
+<xsd:element name = "County" type = "xsd:string" sql:field = "County" />
+<xsd:element name = "Country" type = "xsd:decimal" sql:field = "Country" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

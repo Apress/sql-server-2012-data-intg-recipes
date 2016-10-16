@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<Clients xmlns = "http://www.w3.org/TR/xhtml1/strict">
+<Client>
+<ID> 3</ID>
+<Name> John Smith</Name>
+<Town> Uttoxeter</Town>
+<County> Staffs</County>
+<Address> 4, Grove Drive</Address>
+</Client>
+<Client>
+<ID> 7</ID>
+<Name> Slow Sid</Name>
+<Town> Avignon</Town>
+<County> Vaucluse</County>
+<Address> 2, Rue des Bleues</Address>
+</Client>
+</Clients>

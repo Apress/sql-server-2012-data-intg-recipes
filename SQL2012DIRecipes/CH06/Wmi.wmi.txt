@@ -1,0 +1,3 @@
+SELECT EventCode, EventIdentifier, EventType, Message, TimeGenerated
+FROM Win32_NTLogEvent
+WHERE Category = 2

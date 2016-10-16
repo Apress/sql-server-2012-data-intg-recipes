@@ -1,0 +1,8 @@
+CREATE TABLE CarSales_Staging.dbo.ExportStock
+(
+ID BIGINT NOT NULL,
+Make VARCHAR (50) NULL,
+Marque NVARCHAR(50) NULL,
+Model NVARCHAR(50) NULL,
+) ;
+GO

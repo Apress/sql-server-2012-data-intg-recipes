@@ -1,0 +1,8 @@
+CREATE TABLE CarSales_Staging.dbo.BulkStock
+(
+ID BIGINT NULL,
+Make VARCHAR(50) NULL,
+Marque NVARCHAR(50) NULL,
+Model VARCHAR(50) NULL
+) ;
+GO

@@ -1,0 +1,11 @@
+BULK INSERT dbo.InvoiceBulkLoad
+FROM 'C:\SQL2012DIRecipes\CH02\InvoiceBulkLoad.Txt'
+WITH
+(
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+BATCHSIZE = 5,
+MAXERRORS = 0,
+ERRORFILE = 'C:\SQL2012DIRecipes\CH02\InvoicesErr'
+);

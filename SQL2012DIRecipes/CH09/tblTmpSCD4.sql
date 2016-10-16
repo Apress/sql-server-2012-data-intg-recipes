@@ -1,0 +1,13 @@
+CREATE TABLE CarSales_Staging.dbo.Tmp_SCD4
+(
+ID INT NOT NULL,
+ClientName VARCHAR(150) NULL,
+Country VARCHAR(50) NULL,
+Town VARCHAR(50) NULL,
+County VARCHAR(50) NULL,
+Address1 VARCHAR(50) NULL,
+Address2 VARCHAR(50) NULL,
+ClientType VARCHAR(20) NULL,
+ClientSize VARCHAR(10) NULL
+);
+GO

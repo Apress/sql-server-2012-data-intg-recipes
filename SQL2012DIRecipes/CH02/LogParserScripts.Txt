@@ -1,0 +1,37 @@
+LogParser "SELECT ID,InvoiceNumber,ClientID,TotalDiscount,DeliveryCharge INTO C:\SQL2012DIRecipes\CH02\AA1.TSV FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt" -i:CSV -o:TSV
+
+LogParser "SELECT ID,InvoiceNumber,ClientID,TotalDiscount,DeliveryCharge INTO C:\SQL2012DIRecipes\CH02\AA1.Xml FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt" -i:CSV -o:XML
+
+LogParser "SELECT Rownumber,ID,InvoiceNumber,ClientID,TotalDiscount,DeliveryCharge INTO C:\SQL2012DIRecipes\CH02\AA1.TSV FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt" -i:CSV -o:TSV
+
+LogParser "SELECT * INTO AA1 FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt" -i:CSV -headerRow:OFF -o:SQL -dsn:SQLServer -username:Adam -password:MeForBoss
+
+
+SELECT InvoiceNumber, ID DeliveryCharge INTO C:\SQL2012DIRecipes\CH02\AA1.TSV FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt" -i:CSV -o:TSV 
+
+SELECT InvoiceNumber, ID DeliveryCharge INTO C:\SQL2012DIRecipes\CH02\AA1.TSV FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt WHERE ID > 4" -i:CSV -o:TSV 
+
+SELECT InvoiceNumber, ID DeliveryCharge INTO C:\SQL2012DIRecipes\CH02\AA1.TSV FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt WHERE ID BETWEEN 4 AND 6" -i:CSV -o:TSV 
+
+
+SELECT InvoiceNumber, ID DeliveryCharge INTO C:\SQL2012DIRecipes\CH02\AA1.TSV FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt WHERE InvoiceNumber LIKE ‘%A%’" -i:CSV -o:TSV
+
+LogParser "SELECT COUNT(*) INTO C:\SQL2012DIRecipes\CH02\AA1.CSV FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt" -i:CSV -o:CSV
+
+SELECT ID,InvoiceNumber,ClientID INTO C:\SQL2012DIRecipes\CH02\AA1.Txt FROM C:\SQL2012DIRecipes\CH02\Invoices.Txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<CarSales>
+<Client>
+<ID> 3</ID>
+<ClientName> John Smith</ClientName>
+<Country> 1</Country>
+<Town> Uttoxeter</Town>
+<Invoice>
+<InvoiceNumber> 3A9271EA-FC76-4281-A1ED-714060ADBA30</InvoiceNumber>
+<TotalDiscount> 500.00</TotalDiscount>
+</Invoice>
+</Client>
+<Client>
+<ID > 4</ID>
+<ClientName> Bauhaus Motors</ClientName>
+<Country> 2</Country>
+<Town> Oxford</Town>
+<Invoice>
+<InvoiceNumber> C9018CC1-AE67-483B-B1B7-CF404C296F0B</InvoiceNumber>
+<TotalDiscount> 0.00</TotalDiscount>
+</Invoice>
+</Client>
+</CarSales>

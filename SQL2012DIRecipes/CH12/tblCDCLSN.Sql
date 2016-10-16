@@ -1,0 +1,11 @@
+CREATE TABLE CarSales.dbo.CDCLSN
+(
+ID INT IDENTITY NOT NULL
+,FinalLSN BINARY(10)
+,TableName VARCHAR(128)
+,DateAdded DATETIME DEFAULT GETDATE()
+,NbInserts INT
+,NbUpdates INT
+,NbDeletes INT
+);
+GO

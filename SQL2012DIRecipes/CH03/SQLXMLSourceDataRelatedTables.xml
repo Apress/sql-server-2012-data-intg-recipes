@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<ROOT>
+<Invoice>
+<ID > 3</ID>
+<InvoiceNumber > 3A9271EA-FC76-4281-A1ED-714060ADBA30</InvoiceNumber>
+<DeliveryCharge > 250</DeliveryCharge>
+<Invoice_Lines>
+<ID > 1</ID>
+<InvoiceID > 3</InvoiceID>
+<SalePrice > 5000</SalePrice>
+</Invoice_Lines>
+<Invoice_Lines>
+<ID > 2</ID>
+<InvoiceID > 5</InvoiceID>
+<SalePrice > 12500</SalePrice>
+</Invoice_Lines>
+</Invoice>
+</ROOT>

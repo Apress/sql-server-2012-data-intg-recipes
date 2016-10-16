@@ -1,0 +1,8 @@
+CREATE TABLE CarSales_Staging.dbo.BulkFilesLoaded
+(
+ID int IDENTITY(1,1) NOT NULL,
+DateAdded DATETIME NULL DEFAULT GETDATE(),
+FileName NVARCHAR(250) NULL,
+Source TINYINT NULL
+) ;
+GO

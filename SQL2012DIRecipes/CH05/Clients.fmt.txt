@@ -1,0 +1,8 @@
+11.0
+6
+1 0 4 "" 1 ID ""
+2 SQLNC 2 300 "" 2 ClientName Latin1_General_CI_AS
+3 SQLN 2 100 "" 3 Town Latin1_General_CI_AS
+4 SQLNCHAR 2 100 "" 4 County Latin1_General_CI_AS
+5 SQLNCHAR 2 20 "" 5 ClientSize Latin1_General_CI_AS
+6 SQLDATETIM4 1 4 "" 6 ClientSince ""

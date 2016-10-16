@@ -1,0 +1,43 @@
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+Imports Microsoft.SqlServer.Dts.Runtime.Wrapper
+
+<Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute> _
+<CLSCompliant(False)> _
+Public Class ScriptMain
+    Inherits UserComponent
+    Dim MaxNbCols As Integer = 0
+
+    Public Overrides Sub PreExecute()
+        MyBase.PreExecute()
+
+    End Sub
+
+    Public Overrides Sub PostExecute()
+        MyBase.PostExecute()
+
+        MsgBox(MaxNbCols)
+
+    End Sub
+
+    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+        Dim NbCols As Integer = 0
+        Dim Delimiter As String = ","
+        Dim ColText As String = ""
+
+        'ANSI text
+        ColText = System.Text.Encoding.UTF8.GetString(Row.SingleCol.GetBlobData(0, Convert.ToInt32(Row.SingleCol.Length)))
+
+
+        NbCols = (ColText.Length - ColText.Replace(Delimiter, "").Length) + 1
+
+        If NbCols > MaxNbCols Then
+            MaxNbCols = NbCols
+        End If
+
+    End Sub
+
+End Class

@@ -1,0 +1,6 @@
+ID,Make,Marque,Model,Colour,Product_Type,Vehicle_Type,Cost_Price,Registration_Date,CarPhoto,CarPhotoType,CarPhotoDirectory,CarDocumentation,IndustryDefinition,DateReserved,Weight,Mileage
+1,Triumph,TR4,Sports,1,Petrol,Coupe,4000.00,,,,,,,,,
+2,Triumph,TR5,Sports,1,Petrol,Convertible,2500.00,,,,,,,,,
+3,Triumph,TR7,Sports,2,Petrol,Coupe,7000.00,,,,,,,,,
+4,Aston Martin,DB7,Sports,1,Petrol,Convertible,2750.00,,,,,,,,,
+5,Jaguar,E-type,Sports,2,Petrol,Coupe,27000.00,,,,,,,,,

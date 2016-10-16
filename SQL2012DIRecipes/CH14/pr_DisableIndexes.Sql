@@ -1,0 +1,19 @@
+USE CarSales_Staging
+GO
+CREATE PROCEDURE dbo.pr_DisableIndexes
+AS
+DECLARE @IndexList VARCHAR(4000) ;
+DECLARE IndexList_CUR CURSOR
+FOR
+SELECT IndexName FROM dbo.IndexList ;
+OPEN IndexList_CUR
+FETCH NEXT FROM IndexList_CUR INTO @IndexList
+WHILE @@FETCH_STATUS <> -1
+BEGIN
+EXEC (@IndexList)
+
+FETCH NEXT FROM IndexList_CUR INTO @IndexList
+END;
+CLOSE IndexList_CUR;
+DEALLOCATE IndexList_CUR ;
+GO

@@ -1,0 +1,5 @@
+USE CarSales;
+GO
+ALTER TABLE CarSales.dbo.Client
+ENABLE CHANGE_TRACKING ;
+GO

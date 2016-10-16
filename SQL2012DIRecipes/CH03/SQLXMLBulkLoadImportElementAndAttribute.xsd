@@ -1,0 +1,12 @@
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+xmlns:sql = "urn:schemas-microsoft-com:mapping-schema">
+<xsd:element name = "Invoice" sql:relation = "Client_XMLBulkLoad" >
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name = "ClientName" type = "xsd:integer" sql:field = "ClientName"/>
+<xsd:element name = "County" type = "xsd:integer " sql:field = "County"/>
+</xsd:sequence>
+<xsd:attribute name = "ID" type = "xsd:integer" />
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

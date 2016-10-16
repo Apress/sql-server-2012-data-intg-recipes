@@ -1,0 +1,10 @@
+CREATE TABLE CarSales_Staging.dbo.Client_XMLBulkLoad
+(
+ID int NULL,
+ClientName NVARCHAR(1000) NULL,
+Address1 NVARCHAR(1000) NULL,
+Town NVARCHAR(1000) NULL,
+County NVARCHAR(1000) NULL,
+Country NUMERIC(18, 0) NULL
+);
+GO

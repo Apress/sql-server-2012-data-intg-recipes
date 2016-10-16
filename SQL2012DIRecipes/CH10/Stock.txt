@@ -1,0 +1,6 @@
+ID,Make,Marque,Model,Product_Type,Registration_Year,Mileage,Cost_Price
+1,Triumph,TR4,Sports,Petrol,,,4000.00
+2,Triumph,TR5,Sports,Petrol,,,2500.00
+3,Triumph,TR7,Sports,Petrol,,,7000.00
+4,Aston Martin,DB7,Sports,Petrol,,,2750.00
+5,Jaguar,E-type,Sports,Petrol,,,27000.00

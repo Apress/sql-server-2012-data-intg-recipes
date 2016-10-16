@@ -1,0 +1,18 @@
+<Clients>
+<Client>
+<ClientName > John Smith</ClientName>
+<ID > 3</ID>
+<Details Town = "Uttoxeter">
+<County> Staffs</County>
+<Address1> 4, Grove Drive</Address1>
+</Details>
+</Client>
+<Client>
+<ClientName > Slow Sid</ClientName>
+<ID > 7</ID>
+<Details Town = "Avignon">
+<County> Vaucluse</County>
+<Address1> 2, Rue des Bleues</Address1>
+</Details>
+</Client>
+</Clients>

@@ -1,0 +1,8 @@
+TRUNCATE TABLE dbo.DataProfiling_ColumnLength;
+TRUNCATE TABLE dbo.DataProfiling_ColumnNulls;
+TRUNCATE TABLE dbo.DataProfiling_ColumnStatistics;
+TRUNCATE TABLE dbo.DataProfiling_ColumnValueDistribution;
+TRUNCATE TABLE dbo.DataProfiling_Join_LengthDistribution;
+TRUNCATE TABLE dbo.DataProfiling_Join_ValueDistribution;
+TRUNCATE TABLE dbo.DataProfiling_LengthDistributionItem;
+TRUNCATE TABLE dbo.DataProfiling_ValueDistributionItem;

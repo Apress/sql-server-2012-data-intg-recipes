@@ -1,0 +1,7 @@
+<CarSales>
+<Client ID = "3" ClientName = "John Smith" Country = "1" />
+<Client ID = "4" ClientName = "Bauhaus Motors" Country = "2" />
+<Client ID = "5" ClientName = "Honest Fred" Country = "3" />
+<Client ID = "6" ClientName = "Fast Eddie" Country = "2" />
+<Client ID = "7" ClientName = "Slow Sid" Country = "3" />
+</CarSales>

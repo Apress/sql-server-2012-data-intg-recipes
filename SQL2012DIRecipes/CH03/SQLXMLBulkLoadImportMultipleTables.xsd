@@ -1,0 +1,31 @@
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+xmlns:sql = "urn:schemas-microsoft-com:mapping-schema">
+<xsd:element name = "ROOT" sql:is-constant = "1" >
+<xsd:complexType>
+<xsd:sequence>
+<!-- Invoice -->
+<xsd:element name = "Invoice" sql:relation = "Invoice_XML_Multi" >
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name = "ID" type = "xsd:integer"
+sql:field = "ID" />
+<xsd:element name = "InvoiceNumber" type = "xsd:string"
+sql:field = "InvoiceNumber" />
+<xsd:element name = "DeliveryCharge" type = "xsd:decimal"
+sql:field = "DeliveryCharge" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<!-- Invoice Lines -->
+<xsd:element name = "Invoice_Lines" sql:relation = "Invoice_Lines_XML_Multi" >
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name = "InvoiceID" type = "xsd:integer" sql:field = "InvoiceID" />
+<xsd:element name = "SalePrice" type = "xsd:string" sql:field = "SalePrice" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

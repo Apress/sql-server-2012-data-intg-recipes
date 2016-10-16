@@ -1,0 +1,21 @@
+DECLARE @SQLTEXT VARCHAR(8000);
+DECLARE @Make VARCHAR(50), @CarPhotoType VARCHAR(5);
+DECLARE @CarPhoto VARBINARY(MAX);
+DECLARE @ID INT;
+DECLARE BCPBinaryOUT_CUR CURSOR
+FOR
+SELECT ID, Make, CarPhotoType, CarPhoto
+FROM dbo.Stock
+WHERE CarPhotoType IS NOT NULL;
+OPEN BCPBinaryOUT_CUR;
+FETCH NEXT FROM BCPBinaryOUT_CUR INTO @ID, @Make, @CarPhotoType, @CarPhoto
+WHILE @@FETCH_STATUS = 0
+BEGIN
+SET @SQLTEXT = 'BCP "SELECT CarPhoto FROM CarSales.dbo.Stock WHERE ID ='
++ CAST(@ID AS VARCHAR(11)) + '" QUERYOUT C:\SQL2012DIRecipes\CH07\' + @Make + '.'
++ @CarPhotoType + '-fC:\SQL2012DIRecipes\CH07\Binary.Fmt -SAdam02 -UAdam –PMe4B0ss';
+FETCH NEXT FROM BCPBinaryOUT_CUR INTO @ID, @Make, @CarPhotoType, @CarPhoto
+EXECUTE master.dbo.xp_cmdshell @SQLTEXT
+END;
+CLOSE BCPBinaryOUT_CUR;
+DEALLOCATE BCPBinaryOUT_CUR;

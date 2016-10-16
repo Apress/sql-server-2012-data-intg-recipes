@@ -1,0 +1,16 @@
+(DT_I4)SUBSTRING(ColData,1,FINDSTRING(ColData,",",1) - 1) SUBSTRING(ColData,FINDSTRING(ColData,",",1) + 1,FINDSTRING(ColData,",",2) - FINDSTRING(ColData,",",1) - 1)
+(DT_I4)SUBSTRING(ColData,FINDSTRING(ColData,",",2) + 1,FINDSTRING(ColData,",",3) - FINDSTRING(ColData,",",2) - 1)
+(DT_DBDATE)SUBSTRING(ColData,FINDSTRING(ColData,",",3) + 1,FINDSTRING(ColData,",",4) - FINDSTRING(ColData,",",3) - 1)
+(DT_DECIMAL,2)SUBSTRING(ColData,FINDSTRING(ColData,",",4) + 1,FINDSTRING(ColData,",",5) - FINDSTRING(ColData,",",4) - 1)
+(DT_DECIMAL,2)RIGHT(ColData,LEN(ColData) - FINDSTRING(ColData,",",5))
+
+
+
+LEFT(ColData,FINDSTRING(ColData,",",1) - 1)
+SUBSTRING(ColData,FINDSTRING(ColData,",",1) + 1,FINDSTRING(ColData,",",2) - FINDSTRING(ColData,",",1) - 1)
+SUBSTRING(ColData,FINDSTRING(ColData,",",2) + 1,FINDSTRING(ColData,",",3) - FINDSTRING(ColData,",",2) - 1)
+SUBSTRING(ColData,FINDSTRING(ColData,",",3) + 1,FINDSTRING(ColData,",",4) - FINDSTRING(ColData,",",3) - 1)
+SUBSTRING(ColData,FINDSTRING(ColData,",",4) + 1,FINDSTRING(ColData,",",5) - FINDSTRING(ColData,",",4) - 1)
+SUBSTRING(ColData,FINDSTRING(ColData,",",5) + 1,FINDSTRING(ColData,",",6) - FINDSTRING(ColData,",",5) - 1)
+RIGHT(ColData,LEN(ColData) - FINDSTRING(ColData,",",6))
+

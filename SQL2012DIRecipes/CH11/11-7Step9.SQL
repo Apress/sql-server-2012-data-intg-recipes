@@ -1,0 +1,9 @@
+DELETE
+FROM dbo.Invoice_Lines
+WHERE ID IN (
+SELECT DST.ID
+FROM dbo.Invoice_Lines DST
+LEFT OUTER JOIN ##TMP_Deletes TMP
+ON DST.ID = TMP.ID
+WHERE TMP.ID IS NULL
+)
